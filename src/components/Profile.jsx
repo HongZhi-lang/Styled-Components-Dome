@@ -1,6 +1,13 @@
 import React from "react";
 import { Skeleton } from "antd";
 import styled from "styled-components";
+import { Button } from "../styled/basics";
+import {
+  increment,
+  decrement,
+  incrementByAmount,
+} from "../store/cartCountSlice";
+import { useSelector, useDispatch } from "react-redux";
 
 const ProfileWrapper = styled.div`
   width: 1000px;
@@ -15,9 +22,14 @@ const SkeletonWrapper = styled(Skeleton)`
 `;
 
 function Profile() {
-  console.log(this);
+  const count = useSelector((state) => state.counter.value);
+  const dispatch = useDispatch();
   return (
     <ProfileWrapper>
+      <p>{count}</p>
+      <Button onClick={() => dispatch(increment())}> + </Button>
+      <Button onClick={() => dispatch(decrement())}> - </Button>
+      <Button onClick={() => dispatch(incrementByAmount(100))}>+100</Button>
       <SkeletonWrapper
         loading
         avatar={{ size: 100 }}

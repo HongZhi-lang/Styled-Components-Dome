@@ -4,7 +4,9 @@ import "./index.css";
 import App from "./App";
 import { createGlobalStyle } from "styled-components";
 import { BrowserRouter } from "react-router-dom";
-import bg from "./img/snowberg.jpg"
+import bg from "./img/snowberg.jpg";
+import store from "./store";
+import { Provider } from "react-redux";
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -23,7 +25,9 @@ const GlobalStyle = createGlobalStyle`
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <App />
-    <GlobalStyle />
+    <Provider store={store}>
+      <App />
+      <GlobalStyle />
+    </Provider>
   </BrowserRouter>
 );

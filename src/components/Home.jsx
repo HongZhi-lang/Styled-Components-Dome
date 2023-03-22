@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { flexAround, Button } from "../styled/basics";
 import { useNavigate } from "react-router-dom";
 
+
 const Text = styled.div`
   margin: 200px auto 100px;
   color: #fff;
@@ -22,34 +23,32 @@ const MajorButton = styled(Button)`
 `;
 function Home() {
   const navigate = useNavigate();
-  // const navigation = useNavigation();
-  // console.log(navigation)
+
   return (
-    <div>
-      <Text>
-        <h1>Styled Component</h1>
-        <div>
-          <p>Visual primitives for the component age. </p>
-          <p>
-            Use the best bits of ES6 and CSS to style your apps without stress
-          </p>
-          <MajorButton
-            onClick={() => {
-              window.location.href = "https://styled-components.com";
-            }}
-            bgcolor="#ff9aa9"
-          >
-            Official website
-          </MajorButton>
-          <MajorButton
-            onClick={() => navigate("/menu", { state: { a: 1 } })}
-            bgcolor="#7074c7"
-          >
-            To Menu
-          </MajorButton>
-        </div>
-      </Text>
-    </div>
+    <Text>
+      <h1>Styled Component</h1>
+
+      <div>
+        <p>Visual primitives for the component age. </p>
+        <p>
+          Use the best bits of ES6 and CSS to style your apps without stress
+        </p>
+        <MajorButton
+          onClick={() => {
+            window.location.href = "https://styled-components.com";
+          }}
+          bgcolor="#ff9aa9"
+        >
+          Official website
+        </MajorButton>
+        <MajorButton
+          onClick={() => navigate("/menu", { state: { a: 1 } })}
+          bgcolor="#7074c7"
+        >
+          To Menu
+        </MajorButton>
+      </div>
+    </Text>
   );
 }
 
