@@ -24,7 +24,7 @@ function Home() {
   const navigate = useNavigate();
 
   return (
-    <Text className="animate__animated animate__fadeInDown animate__delay-3s">
+    <Text className="animate__animated animate__fadeInDown animate__delay-2s">
       <h1>Styled Component</h1>
 
       <div>
