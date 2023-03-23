@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { flexAround, Button } from "../styled/basics";
 import { useNavigate } from "react-router-dom";
 
-
 const Text = styled.div`
   margin: 200px auto 100px;
   color: #fff;
@@ -25,7 +24,7 @@ function Home() {
   const navigate = useNavigate();
 
   return (
-    <Text>
+    <Text className="animate__animated animate__fadeInDown">
       <h1>Styled Component</h1>
 
       <div>

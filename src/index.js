@@ -20,6 +20,9 @@ const GlobalStyle = createGlobalStyle`
     overflow: hidden;
     background: url(${bg}) no-repeat center/cover ;
   }
+  :root {
+  --animate-delay: 5s;
+  }
 `;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

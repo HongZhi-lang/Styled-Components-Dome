@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { NavLink, useNavigate } from "react-router-dom";
 import { flexAround, Button } from "./styled/basics";
 import { Modal, Input } from "antd";
+import "animate.css";
 
 const Header = styled.div`
   height: 80px;
