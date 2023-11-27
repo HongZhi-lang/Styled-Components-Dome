@@ -79,5 +79,6 @@ function App() {
   );
 }
 console.log("cherry-pick1");
+console.log("cherry-pick2");
 console.log("NODE_ENV", process.env.NODE_ENV)
 export default App;
